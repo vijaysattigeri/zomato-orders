@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "zomato-orders"
+version = "0.1.0"
+description = "Pulls Zomato orders"
+authors = ["Ayaan Zaidi <hi@obviy.us>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+dateparser = "^1.1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
