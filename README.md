@@ -13,7 +13,10 @@ To get these, login to your Zomato account on the website and open the developer
 
 Video instructions:
 
-# TODO: Add video instructions
+
+https://github.com/obviyus/zomato-orders/assets/22031114/170f1f7f-b597-4661-9032-8862adb6ac72
+
+
 
 ## Usage
 
