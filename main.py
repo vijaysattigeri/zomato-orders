@@ -4,7 +4,13 @@ import requests
 import sqlite3
 
 ORDERS_ENDPOINT = "https://www.zomato.com/webroutes/user/orders"
-COOKIE = "" # Paste your cookies here
+ZOMATO_COOKIES = {
+    "cid": "", # Paste your Zomato cid here
+    "PHPSESSID": "", # Paste your PHPSESSID here
+    "zat": "g0ysS0Qr9W0visH2Zb5ru7Jp1_VnEVuqLmQwJNzK__A.xsAELWwny6Pv7B3AA1_MeffcZ7OS0_etivmrT-TOIkU", # Paste your zat cookie here
+}
+
+COOKIE = "; ".join([f"{key}={value}" for key, value in ZOMATO_COOKIES.items()])
 
 
 DATABASE_NAME = "zomato_orders.sqlite"
@@ -102,7 +108,7 @@ def insert_orders(orders):
 
 
 def get_all_orders():
-    page = 93
+    page = 1
     while True:
         orders = get_orders(page)
         if len(orders) == 0:
